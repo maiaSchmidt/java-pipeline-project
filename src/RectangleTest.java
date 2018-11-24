@@ -7,7 +7,7 @@ public class RectangleTest {
   private Rectangle rectangle;
 
   @BeforeClass
-  public voidsetUp()  {
+  public void setUp()  {
     rectangle = new Rectangle(3, 4);
   }
     
@@ -18,7 +18,7 @@ public class RectangleTest {
   }
 
   @Test 
-  public void checkPerimeter {
+  public void checkPerimeter() {
     assertEquals(14, rectangle.getPerimeter());
   }
 }
