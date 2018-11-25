@@ -7,7 +7,7 @@ public class RectangleTest {
   private Rectangle rectangle;
 
   @BeforeClass
-  public void setUp()  {
+  public static void setUp()  {
     rectangle = new Rectangle(3, 4);
   }
     
