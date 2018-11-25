@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 public class RectangleTest {
 
-  private Rectangle rectangle;
+  private static Rectangle rectangle;
 
   @BeforeClass
   public static void setUp()  {
