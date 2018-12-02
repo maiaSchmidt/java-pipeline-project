@@ -6,7 +6,7 @@ pipeline {
   }
 
   stages {
-    stage ('build') {
+    stage ('Build') {
       agent {
         label 'apache'
       }
@@ -19,7 +19,7 @@ pipeline {
         }
       }			
     }
-    stage ('unit tests') {
+    stage ('Unit tests') {
       agent {
         label 'apache'
       }
@@ -28,7 +28,7 @@ pipeline {
         junit 'reports/result.xml'
       }
     }
-    stage ('deploy') {
+    stage ('Deploy') {
       agent {
         label 'apache'
       }
