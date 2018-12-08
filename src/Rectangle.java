@@ -2,6 +2,7 @@ public class Rectangle {
   int length;
   int width;
 
+  //Constructor.
   public Rectangle(int length, int width){
     this.length = length;
     this.width = width; 	
