@@ -105,11 +105,11 @@ pipeline {
         sh 'git pull'
 	echo 'Merging development branch into master branch.'
         sh 'git merge development'
-        echo 'Pushing to origin mastert'
+        echo 'Pushing to origin master'
+        sh 'git remote set-url origin git@github.com:maiaSchmidt/java-pipeline-project.git'
         sh 'git push origin master'
         echo 'Tagging the release'
         sh "git tag rectangle-${env.MAJOR_VERSION}.${env.BUILD_NUMBER}"
-        sh "git remote set-url origin git@github.com:maiaSchmidt/java-pipeline-project.git"
         sh "git push origin rectangle-${env.MAJOR_VERSION}.${env.BUILD_NUMBER}" 
       }
     }
