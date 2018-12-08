@@ -23,6 +23,12 @@ pipeline {
         }
       }			
     }
+    stage ('Say hello') {
+      agent any
+      steps {
+        sayHello 'Fabio'
+      }		
+    }
     stage ('Unit tests') {
       agent {
         label 'apache'
