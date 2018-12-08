@@ -98,11 +98,11 @@ pipeline {
   }    
   post {
     failure {
-      emailext {
-        subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] failed !"
-        body: "Check console output <a href='${env.BUILD_URL}'>Console output </a: href>"
+      emailext (
+        subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] failed !",
+        body: "Check console output <a href='${env.BUILD_URL}'>Console output </a: href>",
         to: "sofortal@yahoo.com.br" 	
-      }
+      )
     } 
   }
 }
